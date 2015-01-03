@@ -8,7 +8,7 @@ angular.module('Translations').config(function ($translateProvider) {
 	$translateProvider.translations('ru', {
 	'a': 'b',
 	'c.x': 'd',
-	'c.y': 'e'
+	'c.y': '"\'e'
 });
 	$translateProvider.preferredLanguage('ru');
 });

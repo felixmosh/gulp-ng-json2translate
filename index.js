@@ -2,6 +2,7 @@ var path = require('path');
 
 var gutil = require('gulp-util');
 var through = require('through2');
+var toSingleQuotes = require('to-single-quotes');
 
 function getTemplate(hasPreferredLanguage) {
 	var tmpl = '\'use strict\';\n' +
@@ -59,7 +60,7 @@ module.exports = function (options) {
 			var value = gutil.template(getTemplate(options.hasPreferredLanguage), {
 				moduleName: options.moduleName,
 				language: options.extractLanguage(file),
-				translations: file.contents.toString().replace(/"/g, '\''),
+				translations: toSingleQuotes(file.contents.toString()),
 				file: file
 			});
 
