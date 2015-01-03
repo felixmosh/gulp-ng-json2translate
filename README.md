@@ -1,5 +1,6 @@
 gulp-ng-json2translate
 =========
+[![Built with Gulp](https://img.shields.io/badge/Built%20with-Gulp-red.svg)](http://gulpjs.com/)
 
 Plugin that wraps `json` as an angular translate module.
 
